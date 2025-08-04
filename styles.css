@@ -13,6 +13,17 @@ body {
   padding: 30px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.profile-pic {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 header, section {
