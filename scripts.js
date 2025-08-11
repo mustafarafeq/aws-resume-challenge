@@ -1,15 +1,17 @@
-// Example interactivity – dynamically highlight your name on page load
 window.addEventListener("DOMContentLoaded", () => {
   const name = document.querySelector("h1");
   name.style.color = "#004aad";
 
-  // Visitor counter placeholder
   const counterElement = document.getElementById("visitor-counter");
 
-  // Simulated fetch from backend (replace with AWS API Gateway URL later)
-  // Example: fetch('https://your-api-gateway-url.com/dev/counter')
-  setTimeout(() => {
-    const fakeCount = Math.floor(Math.random() * 100) + 1; // Random number 1–100
-    counterElement.innerText = fakeCount;
-  }, 500); // delay for visual effect
+  fetch(https://hu7b2m292j.execute-api.us-east-1.amazonaws.com/default/resume-visitor-counter)
+    .then(res => res.json())
+    .then(data => {
+      counterElement.innerText = data.count;
+    })
+    .catch(err => {
+      console.error("Error fetching count:", err);
+      counterElement.innerText = "Error";
+    });
 });
+
