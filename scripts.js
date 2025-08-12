@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const counterElement = document.getElementById("visitor-counter");
 
-  fetch(https://hu7b2m292j.execute-api.us-east-1.amazonaws.com/default/resume-visitor-counter)
+  fetch(https://hu7b2m292j.execute-api.us-east-1.amazonaws.com/default)
     .then(res => res.json())
     .then(data => {
       counterElement.innerText = data.count;
